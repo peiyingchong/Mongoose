@@ -1,0 +1,41 @@
+<html>
+    <a href="/" > HOME</a>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            table,th,td{
+                border: 1.5px solid rgb(71, 43, 6);
+                width: 50%;
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3> The list of parcels:</h3>
+            <table>
+                <tr>
+                    <th> Sender</th>
+                    <th> Address</th>
+                    <th> Weight </th>
+                    <th> Fragile </th>
+                    <th> Cost </th>
+                </tr>
+                <% for (let i =0; i<parcelDb.length; i++){ %>
+                    <tr> 
+                        <td> <%= parcelDb[i].sender %></td>
+                        <td> <%= parcelDb[i].add %></td>
+                        <td> <%= parcelDb[i].weight %></td>
+                        <td> <%= parcelDb[i].fragile %></td>
+                        <td> <%= parcelDb[i].cost %> </td>
+                    </tr>
+                    <% }%>
+            </table>
+    </body>
+    <a href="/addparcel" > Add a New Parcel</a>
+        </br>
+        <a href="/listparcel" > List Parcels</a>  
+        </br>
+        <a href="/updateparcel" > Update Parcels</a> 
+        </br>
+        <a href="/deleteParcel" > Delete Parcel</a>
+</html>

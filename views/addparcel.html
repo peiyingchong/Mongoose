@@ -1,0 +1,26 @@
+<html>
+    <a href="/" > HOME</a>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <form  method = "post" action = "parceladded">
+            Sender <input type = "text"  name = "sender" /> </br>
+            Address <input type = "text" name = "add" /> </br>
+            Weight <input type = "number" name = "weight" /> </br>
+            Cost <input type = "number" name = "cost" /> </br>
+            Fragile <select name = "fragile" >
+                <option value = "yes"> Yes</option>
+                <option value = "no"> No </option>
+            </select>
+            </br>
+            <button type ="submit"> Submit Parcel </button>
+        </form>
+    </body>
+    <a href="/addparcel" > Add a New Parcel</a>
+        </br>
+        <a href="/listparcel" > List Parcels</a>  
+        </br>
+        <a href="/updateparcel" > Update Parcels</a> </br>
+        <a href="/deleteParcel" > Delete Parcel</a>
+</html>
