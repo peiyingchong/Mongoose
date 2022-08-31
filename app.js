@@ -54,8 +54,7 @@ app.post('/parcelAdded', (req, res) => {
 app.get('/listparcel', function(req,res)
 {
     Parcel.find({},function(err,docs){
-        if(err) res.json(err);
-        else res.render(__dirname + '/views/list.html', {parcelDb:docs});
+        res.render(__dirname + '/views/list.html', {parcelDb:docs});
     })
 })
 
