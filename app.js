@@ -45,7 +45,9 @@ app.post('/parcelAdded', (req, res) => {
         fragile: newParcel.fragile
     })
     newParcel.save(function(err){
-        if(err)throw err;
+        if(err) 
+        console.log("error");
+        else
         console.log("newParcel successfully added")
     })
     res.redirect('/listparcel')
