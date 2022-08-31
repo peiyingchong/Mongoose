@@ -1,0 +1,35 @@
+body{
+    background-image: url('office.png');
+    background-size: cover;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font: Georgia; 
+    font-size :60px;
+}
+h2{
+    color:antiquewhite;
+    font-size: 20px;
+}
+h3{
+    color:rgb(255, 246, 166);
+    font-size: 40px;
+}
+table{
+    background-color: rgb(238, 227, 189);
+}
+a{
+    margin-right: 2cm;
+    color: rgb(70, 58, 4);
+    font-size: 20px;
+}
+
+a:link, a:visited {
+    background-color: rgb(243, 231, 166);
+    color: black;
+    border: 2px solid rgb(51, 39, 5);
+    padding: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

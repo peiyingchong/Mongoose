@@ -1,41 +1,41 @@
 <html>
-    <a href="/" > HOME</a>
     <head>
         <link rel="stylesheet" href="styles.css">
-        <style>
-            table,th,td{
-                border: 1.5px solid rgb(71, 43, 6);
-                width: 50%;
-                height: 40px;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
     </head>
     <body>
+        <a type = "button" class= "btn btn-primary btn-lg" href="/">Home</a>
+        <a type = "button" class= "btn btn-primary btn-lg" href="/addparcel">Add a New Parcel</a>
+        <a type = "button" class= "btn btn-primary btn-lg" href="/updateparcel">Update Parcel</a>
+        <a type = "button" class= "btn btn-primary btn-lg" href="/listparcel">List all parcels</a>
+        <a type = "button" class= "btn btn-primary btn-lg" href="/listparcelbySender">List parcels by Sender</a>
+        <a type = "button" class= "btn btn-primary btn-lg" href="/listparcelbyWeightRange">List parcels by weight</a>
+        <a type = "button" class= "btn btn-primary btn-lg" href="/deletebySender">Delete by Sender</a>
+        <a type = "button" class= "btn btn-primary btn-lg" href="/deletebyId">Delete by Id</a>
+    </body>
+    <body>
         <h3> The list of parcels:</h3>
-            <table>
-                <tr>
-                    <th> Sender</th>
-                    <th> Address</th>
-                    <th> Weight </th>
-                    <th> Fragile </th>
-                    <th> Cost </th>
-                </tr>
-                <% for (let i =0; i<parcelDb.length; i++){ %>
-                    <tr> 
-                        <td> <%= parcelDb[i].sender %></td>
-                        <td> <%= parcelDb[i].add %></td>
-                        <td> <%= parcelDb[i].weight %></td>
-                        <td> <%= parcelDb[i].fragile %></td>
-                        <td> <%= parcelDb[i].cost %> </td>
+            <table class= "table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th scope= "col"> Sender</th>
+                        <th scope = "col"> Address</th>
+                        <th scope = "col">Weight </th>
+                        <th scope = "col">Fragile </th>
+                        <th scope = "col"> Cost </th>
                     </tr>
-                    <% }%>
+                </thead>
+                <tbody>
+                    <% for (let i =0; i<parcelDb.length; i++){ %>
+                        <tr> 
+                            <td> <%= parcelDb[i].sender %></td>
+                            <td> <%= parcelDb[i].address %></td>
+                            <td> <%= parcelDb[i].weight %></td>
+                            <td> <%= parcelDb[i].fragile %></td>
+                            <td> <%= parcelDb[i].cost %> </td>
+                        </tr>
+                        <% }%>
+                </tbody>
             </table>
     </body>
-    <a href="/addparcel" > Add a New Parcel</a>
-        </br>
-        <a href="/listparcel" > List Parcels</a>  
-        </br>
-        <a href="/updateparcel" > Update Parcels</a> 
-        </br>
-        <a href="/deleteParcel" > Delete Parcel</a>
 </html>

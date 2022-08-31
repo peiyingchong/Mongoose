@@ -1,6 +1,8 @@
 <html>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+    </head>
     <body>
         <a type = "button" class= "btn btn-primary btn-lg" href="/">Home</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/addparcel">Add a New Parcel</a>
@@ -10,20 +12,12 @@
         <a type = "button" class= "btn btn-primary btn-lg" href="/listparcelbyWeightRange">List parcels by weight</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/deletebySender">Delete by Sender</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/deletebyId">Delete by Id</a>
-        <form method = "post" action = "updated">
-            To update Parcel by Id:</br>
-            Input Id <input type = "text" name = "id" /> </br>
-            Details to be updated:</br>
-            Sender <input type = "text" name = "sender"/> </br>
-            Weight <input type = "number" name = "weight" /></br>
-            Address <input type = "text" name = "address" /> </br>
-            Cost <input type = "number" name = "cost" /> </br>
-            Fragile <select name = "fragile" >
-                <option value = "yes"> Yes</option>
-                <option value = "no"> No </option>
-            </select>
+        <form method= "post" action = "weightRange" >
+            <h2>Enter weight range to list parcels by weight:</h2></br>
+            Minimum Weight <input type = "number" name = "min" /> </br>
+            Maximum Weight <input type = "number" name = "max" /> </br>
+            <button type ="submit"> Submit Parcel </button></br>
             </br>
-            <button type ="submit"> Submit Parcel </button>
-        </form>
     </body>
+    
 </html>

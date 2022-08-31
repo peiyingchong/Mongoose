@@ -1,10 +1,10 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-    </head>
-    <body>
-        <a type = "button" class= "btn btn-primary btn-lg" href="/">Home</a>
+        <head>
+            <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="./css/bootstrap.min.css">
+        </head>
+        <body>
+            <a type = "button" class= "btn btn-primary btn-lg" href="/">Home</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/addparcel">Add a New Parcel</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/updateparcel">Update Parcel</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/listparcel">List all parcels</a>
@@ -12,7 +12,12 @@
         <a type = "button" class= "btn btn-primary btn-lg" href="/listparcelbyWeightRange">List parcels by weight</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/deletebySender">Delete by Sender</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/deletebyId">Delete by Id</a>
-
+        
+        <form method= "post" action = "senders" >
+            <h2>Enter Sender's Name to list parcels by Sender:</h2></br>
+            Sender <input type = "text" name = "sender" /> </br>
+            <button type ="submit"> Submit Parcel </button></br>
+            </br>
+        </form> 
     </body>
 </html>
-
