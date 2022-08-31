@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 app.use("/js",express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")))
 app.use("/css",express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")))
 app.engine('html',require('ejs').renderFile);
