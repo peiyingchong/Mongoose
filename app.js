@@ -18,7 +18,7 @@ app.use(express.static('css'));
 const Parcel = require('./models/parcel');
 const { mainModule } = require('process');
 
-let url = 'mongodb://localhost:27017/parcelDb'
+let url = 'mongodb://34.70.119.115:27017/parcelDb'
 
 mongoose.connect(url,function(err){
     if(err){
