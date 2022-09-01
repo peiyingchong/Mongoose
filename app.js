@@ -59,6 +59,38 @@ app.get('/listparcel', function(req,res)
         res.render(__dirname + '/views/list.html', {parcelDb:docs});
     })
 })
+app.get('/delete',function(req,res){
+    res.sendFile(path.join(__dirname,"/views/delete.html"));
+    
+})
+app.get('/deletebyWeight',function(req,res){
+    res.sendFile(path.join(__dirname,"/views/deletebyweight.html"))
+})
+app.post('/deletedWeight',function(req,res){
+    Parcel.deleteMany({'weight': req.body.weight},function(err,doc){
+        console.log(doc);
+    })
+    res.redirect('/listparcel')
+})
+app.get('/deletebyAdd',function(req,res){
+    res.sendFile(path.join(__dirname,"/views/deletebyadd.html"))
+})
+
+app.post('/deletedAdd',function(req,res){
+    Parcel.deleteMany({'address': req.body.address},function(err,doc){
+        console.log(doc);
+    })
+    res.redirect('/listparcel')
+})
+app.get('/deletebyfragile',function(req,res){
+    res.sendFile(path.join(__dirname,"/views/deletebyf.html"))
+})
+app.post('/deletedF',function(req,res){
+    Parcel.deleteMany({'fragile': req.body.fragile},function(err,doc){
+        console.log(doc);
+    })
+    res.redirect('/listparcel')
+})
 
 app.get('/deletebyId',function(req,res){
     res.sendFile(path.join(__dirname,"/views/deletebyId.html"));

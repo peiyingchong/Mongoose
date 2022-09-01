@@ -13,7 +13,15 @@
         <a type = "button" class= "btn btn-primary btn-lg" href="/deletebySender">Delete by Sender</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/deletebyId">Delete by Id</a>
         <a type = "button" class= "btn btn-primary btn-lg" href="/delete">Delete by Weight or Address or Fragile</a>
-
+    
+        <form  method = "post" action = "deletedF">
+            <h2>Enter fragile to delete parcel by fragile:</h2></br>
+            Fragile <select name = "fragile" >
+                <option value = "yes"> Yes</option>
+                <option value = "no"> No </option>
+            </select>
+            <button type ="submit"> Submit Parcel </button></br>
+            </br>
+        </form>
     </body>
 </html>
-
