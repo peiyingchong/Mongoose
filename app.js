@@ -59,10 +59,11 @@ app.get('/listparcel', function(req,res)
         res.render(__dirname + '/views/list.html', {parcelDb:docs});
     })
 })
+
 app.get('/delete',function(req,res){
     res.sendFile(path.join(__dirname,"/views/delete.html"));
-    
 })
+
 app.get('/deletebyWeight',function(req,res){
     res.sendFile(path.join(__dirname,"/views/deletebyweight.html"))
 })
